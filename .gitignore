@@ -1,0 +1,12 @@
+# Root .gitignore for Forum-Flow
+
+# Local Guides / Internal Notes
+guides/
+/guides
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.user
