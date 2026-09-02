@@ -1,0 +1,12 @@
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\bin\Debug\net10.0\ForumFlow.Domain.deps.json
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\bin\Debug\net10.0\ForumFlow.Domain.dll
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\bin\Debug\net10.0\ForumFlow.Domain.pdb
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\ForumFlow.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\ForumFlow.Domain.AssemblyInfoInputs.cache
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\ForumFlow.Domain.AssemblyInfo.cs
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\ForumFlow.Domain.csproj.CoreCompileInputs.cache
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\ForumFlow.Domain.sourcelink.json
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\ForumFlow.Domain.dll
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\refint\ForumFlow.Domain.dll
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\ForumFlow.Domain.pdb
+D:\my prj\Forum-Flow\forum-flow-be\ForumFlow.Domain\obj\Debug\net10.0\ref\ForumFlow.Domain.dll
