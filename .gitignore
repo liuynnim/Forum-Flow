@@ -4,9 +4,28 @@
 guides/
 /guides
 
-# IDE & OS
+# .NET / C# Build Results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+out/
+publish/
+
+# Visual Studio / Rider / VS Code / OS
+.vs/
 .vscode/
 .idea/
 .DS_Store
 *.suo
 *.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+
