@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ForumFlow.Api/ForumFlow.Api.csproj" />
+  <Project Path="ForumFlow.Application/ForumFlow.Application.csproj" />
+  <Project Path="ForumFlow.Domain/ForumFlow.Domain.csproj" />
+  <Project Path="ForumFlow.Infrastructure/ForumFlow.Infrastructure.csproj" />
+</Solution>
