@@ -1,8 +1,10 @@
+using ForumFlow.Application;
 using ForumFlow.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ── 1. ĐĂNG KÝ SERVICES (DI CONTAINER) ──────────────────────
+builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
 builder.Services.AddControllers();
@@ -17,8 +19,6 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-
-app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
