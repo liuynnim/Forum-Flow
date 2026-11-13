@@ -28,4 +28,7 @@ publish/
 .env.*
 !.env.example
 appsettings.Local.json
+appsettings.*.Local.json
+appsettings.*.local.json
+*.local.json
 
