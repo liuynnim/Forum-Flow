@@ -1,4 +1,5 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
+import { useAuthStore } from "@/store/useAuthStore";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -30,11 +31,10 @@ const processQueue = (error: unknown, token: string | null = null) => {
 
 axiosClient.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
-    if (typeof window !== "undefined") {
-      const token = localStorage.getItem("accessToken");
-      if (token && config.headers) {
-        config.headers.Authorization = `Bearer ${token}`;
-      }
+    // Đọc token trực tiếp từ Zustand Store
+    const token = useAuthStore.getState().accessToken;
+    if (token && config.headers) {
+      config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
@@ -77,7 +77,11 @@ axiosClient.interceptors.response.use(
         );
 
         const { accessToken } = response.data;
-        localStorage.setItem("accessToken", accessToken);
+        const currentUser = useAuthStore.getState().user;
+        if (currentUser) {
+          useAuthStore.getState().setAuth(accessToken, currentUser);
+        }
+
         // chạy các request khác đang chờ
         processQueue(null, accessToken);
         // chạy lại request ban đầu ( ban đầu vì nó là request đầu tiên chạy refresh còn các request sau sẽ được chạy thông qua processQueue)
@@ -88,8 +92,9 @@ axiosClient.interceptors.response.use(
       } catch (refreshError) {
         // trả lỗi về hết cho các request đang chờ
         processQueue(refreshError, null);
+        // Xóa sạch trạng thái đăng nhập từ Zustand Store (persist tự xóa LocalStorage)
+        useAuthStore.getState().logout();
         if (typeof window !== "undefined") {
-          localStorage.removeItem("accessToken");
           window.location.href = "/login";
         }
         return Promise.reject(refreshError);
