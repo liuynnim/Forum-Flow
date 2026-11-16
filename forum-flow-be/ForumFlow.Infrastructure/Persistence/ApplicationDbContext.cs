@@ -1,10 +1,11 @@
+using ForumFlow.Application.Common.Interfaces;
 using ForumFlow.Domain.Entities;
 using ForumFlow.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace ForumFlow.Infrastructure.Persistence;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options) { }
